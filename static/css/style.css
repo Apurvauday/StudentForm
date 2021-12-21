@@ -1,0 +1,13 @@
+body{
+  background-color: blue;
+}
+table{
+  border: 5px bold red;
+  border-radius: 5px;
+}
+th{
+  border-bottom: 5px bold green;
+}
+tr{
+  border: 5px bold yellow;
+}

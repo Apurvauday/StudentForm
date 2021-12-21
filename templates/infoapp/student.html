@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Student List</title>
+    <link rel="stylesheet" href="{%static '/css/style.css' %}">
+  </head>
+  <body>
+    <h1>The Students list is: </h1>
+    {% if student_list %}
+    <table>
+      <thead>
+        <th>name</th>
+        <th>email</th>
+        <th>phnumber</th>
+        <th>address</th>
+      </thead>
+      {% for std in student_list %}
+      <tr>
+        <td>{{std.name}}</td>
+        <td>{{std.email}}</td>
+        <td>{{std.phnumber}}</td>
+        <td>{{std.address}}</td>
+      </tr>
+      {% endfor %}
+    </table>>
+    {% else %}
+       <h3>No Student records found ...</h3>
+    {% endif %}
+    </body>
+  </html>
